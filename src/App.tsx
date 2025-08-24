@@ -1,18 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { Features } from './components/Features';
+import { Pricing } from './components/Pricing';
+import { Testimonials } from './components/Testimonials';
+import { CTA } from './components/CTA';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Welcome to React
-        </h1>
-        <p className="text-lg text-gray-600">
-          Start building your amazing application!
-        </p>
-      </div>
+    <div className="min-h-screen bg-black text-white">
+      <Header />
+      <Hero />
+      <Features />
+      <Pricing />
+      <Testimonials />
+      <CTA />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
