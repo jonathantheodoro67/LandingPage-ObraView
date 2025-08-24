@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 export const CTA = () => {
   return (
@@ -13,9 +12,9 @@ export const CTA = () => {
             Transforme sua empresa oferecendo uma experiência única para seus clientes, 
             apresentando relatórios e cronogramas em uma plataforma moderna.
           </p>
-          <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-4 text-lg">
+          <button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-4 text-lg rounded-lg transition-colors">
             Começar agora
-          </Button>
+          </button>
         </div>
       </div>
     </section>

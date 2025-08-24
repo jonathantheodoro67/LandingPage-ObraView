@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 
 export const Testimonials = () => {
   const testimonials = [
@@ -47,8 +46,8 @@ export const Testimonials = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-gray-800/50 border-gray-700">
-              <CardContent className="p-6">
+            <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg">
+              <div className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-2xl">
                     {testimonial.image}
@@ -62,8 +61,8 @@ export const Testimonials = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   "{testimonial.text}"
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

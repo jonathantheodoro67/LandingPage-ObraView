@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { DashboardPreview } from './DashboardPreview';
 
 export const Hero = () => {
@@ -17,12 +16,12 @@ export const Hero = () => {
             experiência premium.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-3 text-lg">
+            <button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-3 text-lg rounded-lg transition-colors">
               Começar agora
-            </Button>
-            <Button variant="outline" className="border-gray-600 text-white hover:bg-gray-800 px-8 py-3 text-lg">
+            </button>
+            <button className="border border-gray-600 text-white hover:bg-gray-800 px-8 py-3 text-lg rounded-lg transition-colors">
               Ver Funcionalidades
-            </Button>
+            </button>
           </div>
         </div>
         

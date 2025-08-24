@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const Pricing = () => {
   const plans = [
@@ -67,11 +65,11 @@ export const Pricing = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <Card 
+            <div 
               key={index} 
               className={`relative bg-gray-800/50 border-gray-700 ${
                 plan.popular ? 'border-green-500 scale-105' : ''
-              }`}
+              } border rounded-lg`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -80,15 +78,15 @@ export const Pricing = () => {
                   </span>
                 </div>
               )}
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-white text-xl mb-2">{plan.name}</CardTitle>
+              <div className="text-center pb-4 p-6">
+                <h3 className="text-white text-xl mb-2 font-semibold">{plan.name}</h3>
                 <div className="mb-2">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <p className="text-gray-400 text-sm">{plan.description}</p>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              </div>
+              <div className="space-y-4 p-6 pt-0">
                 <ul className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -99,17 +97,17 @@ export const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <Button 
+                <button 
                   className={`w-full mt-6 ${
                     plan.popular 
                       ? 'bg-green-500 hover:bg-green-600 text-black' 
                       : 'bg-gray-700 hover:bg-gray-600 text-white'
-                  }`}
+                  } px-4 py-2 rounded-lg transition-colors font-semibold`}
                 >
                   {plan.buttonText}
-                </Button>
-              </CardContent>
-            </Card>
+                </button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
